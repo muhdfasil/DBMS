@@ -1,0 +1,17 @@
+create database company;
+
+create table project (id integer(5) primary key,name varchar(20),address varchar(50),dpt_name varchar(20),dpt_loc varchar(20), project_no integer(5),project_name varchar(20),hours integer(5));
+
+insert into project (id,name,address,dpt_name,dpt_loc,project_no,project_name,hours) values
+(1,'fasil','natyamangalam','research','kozhikode',1,'x',100),
+(2,'selva','valanchery','front_end','palakkad',2,'y',110),
+(3,'aparna','pattambi','back_end','kochi',3,'z',200);
+
+select name,address from project where dpt_name='research';
+
+select project_no,project_name,sum(hours) from project  where project_no=2;
+
+select project_no,project_name,dpt_name,dpt_loc from project where dpt_loc='kochi';
+
+
+
