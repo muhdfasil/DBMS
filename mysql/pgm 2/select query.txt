@@ -1,5 +1,7 @@
 create database company;
 
+use company;
+
 create table project (id integer(5) primary key,name varchar(20),address varchar(50),dpt_name varchar(20),dpt_loc varchar(20), project_no integer(5),project_name varchar(20),hours integer(5));
 
 insert into project (id,name,address,dpt_name,dpt_loc,project_no,project_name,hours) values
