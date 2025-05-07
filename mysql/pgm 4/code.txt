@@ -7,7 +7,7 @@ create table employee (id integer(5) primary key,name varchar(20),salary integer
     (3,'Aparna',40000,'HR','2002-02-20'),
     (4,'Huda',40000,'HR','2003-10-20'),
     (5,'Fahiz',90000,'Analyst','2000-01-01');
-select department,count(id) from employee group by department;
-select sum(salary), department from employee group by department order by department asc;
-select sum(salary), department from employee where department != 'HR' group by department;
-select department, salary, count(id) from employee group by department, salary having count(id) > 1 order by department;
+select department,count(*) from employee group by department;
+select sum(salary), department from employee group by department order by sum(department);
+select sum(salary), department from employee where department != 'HR' and department is not NULL group by department;
+select department, salary, count(*) from employee group by department, salary order by department;
