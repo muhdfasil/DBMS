@@ -1,0 +1,11 @@
+create table emp(id int,name varchar(30),age int,salary int);
+grant select,insert,update,delete on emp to 'root'@'localhost';
+begin;
+insert into emp(id,name,age,salary)values(1,'Fasil',21,98000),(2,'Lima',22,98000),(3,'Dilshana',21,98000);
+select * from emp;
+savepoint a;
+delete from emp where id=1;
+select * from emp;
+rollback to a;
+select * from emp;
+commit;
