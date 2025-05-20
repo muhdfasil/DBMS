@@ -1,0 +1,4 @@
+create table stud(name varchar(20),class varchar(20),age int,address varchar(50),mark int);
+insert into stud values('Fasil','MCA',21,'Pattambi',97),('Huda','MCA',22,'Ponnani',97),('Aparna','MCA',22,'Pattambi',97),('Fahiz','MCA',24,'Thuvvur',97);
+create view stud_view as select name,mark from stud;
+select * from stud_view;
