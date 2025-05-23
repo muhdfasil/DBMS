@@ -34,3 +34,13 @@ db.employee.find({$or: [{ salary: {$lt: 6000} },{ salary: {$gt: 7000} }]})
 db.employee.updateOne( {name: "Arun" }, { $set: { designation:"Manager"} } ) 
 
 db.employee.deleteOne({ name: "Arun" })
+
+use emp
+
+db.dropDatabase()
+
+use company
+
+db.createcollection("staff")
+
+db.staff.drop()
