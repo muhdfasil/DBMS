@@ -1,0 +1,12 @@
+DECLARE 
+a int;
+b int;
+BEGIN
+a := &a;
+b := &b;
+if(a>b) then
+dbms_output.put_line('a is grater' || a);
+else
+dbms_output.put_line('b is grater' || b);
+end if;
+END;
